@@ -7,12 +7,12 @@ public class MyGirstProgram {
         hello("user");
         hello("Romka");
 
-        double l = 5;
-        System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
+        Square s = new Square (5);
+        s.l = 5;
+        System.out.println("Площадь квадрата со стороной " + s.l + " = " + s.area());
 
-        double a = 4;
-        double b = 6;
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+        Rectangle r = new Rectangle(4, 6);
+        System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
 
     }
     public static void hello(String somebody){
@@ -20,12 +20,9 @@ public class MyGirstProgram {
         System.out.println("Hello," + somebody + "!");
 
     }
-    public static double area(double len) {
-        return len* len;
-    }
 
-    public static double area(double a, double b){
-        return a* b;
+    public static double area(Rectangle r){
+        return r.a * r.b;
     }
 
 }
